@@ -1,0 +1,4 @@
+SELECT * from USER WHERE name = 'somkiat'
+
+id
+name

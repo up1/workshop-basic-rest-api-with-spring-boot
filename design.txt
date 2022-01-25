@@ -1,0 +1,13 @@
+GET /hello/somkiat
+
+// Success
+Code = 200
+{
+    "message": "Hello somkiat"
+}
+
+// Failure :: user not found
+Code = 404
+{
+    "message": "User=other not found"
+}
