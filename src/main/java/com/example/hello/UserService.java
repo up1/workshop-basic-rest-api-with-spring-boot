@@ -11,6 +11,10 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     public String concatData(String name) {
         Optional<User> result = userRepository.findByName(name);
         if(result.isPresent()) {
