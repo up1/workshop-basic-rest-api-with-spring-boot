@@ -4,6 +4,7 @@ import com.example.hello.User;
 import com.example.hello.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
@@ -12,10 +13,16 @@ public class DemoTxService {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private Service2 service2;
+
+    @Autowired
+    private Service3 service3;
+
+    @Transactional
     public void callRepository() {
-        step1();
-        step2();
-        processLongRunning();
+        service2.doSth();
+        service3.doSth();
     }
 
     public void processLongRunning() {
