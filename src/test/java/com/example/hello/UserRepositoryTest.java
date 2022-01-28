@@ -33,6 +33,6 @@ class UserRepositoryTest {
         // Act
         Optional<User> result = userRepository.findByName("testing");
         // Assert
-        assertTrue(result.isPresent());
+        assertFalse(result.isPresent());
     }
 }

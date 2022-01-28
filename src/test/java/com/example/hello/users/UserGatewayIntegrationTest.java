@@ -12,7 +12,7 @@ class UserGatewayIntegrationTest {
     @Autowired
     private UserGateway userGateway;
 
-    @Test
+
     void getUserById() {
         // Act
         UserResponse result = userGateway.getUserById(1);
